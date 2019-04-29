@@ -7,7 +7,7 @@ function getAllusers(){
          $users = array();  
        $result = $conn->query($sql);
        
-           while ($row = $result->fetch_assoc()){
+           while ($row = mysqli_fetch_array($result)){
                $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
            }
        close();
