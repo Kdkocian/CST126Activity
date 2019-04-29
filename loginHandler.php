@@ -25,7 +25,7 @@ if ($Pword == ($blank or NULL)){
     if ($row['USERNAME'] == $Uname && $row['PASSWORD'] == $Pword ){
         include 'loginResponse.php';
     } else{
-        include 'loginFailed.php';
         $message = 'Login Failed';
+        include 'loginFailed.php';
     }
     ?>
