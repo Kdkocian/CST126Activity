@@ -21,7 +21,7 @@ if ($Pword == ($blank or NULL)){
         or die ("Failed to query database". mysqli_connect_error());
     $row = mysqli_fetch_array($result);
     if ($row['USERNAME'] == $Uname && $row['PASSWORD'] == $Pword ){
-        $db->saveUserId($row['id']);
+        $db->saveUserId($row['ID']);
         include 'loginResponse.php';
     } else{
         $message = 'Login Failed';
