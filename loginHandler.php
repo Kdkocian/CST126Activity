@@ -5,8 +5,7 @@ $blank = "";
 $Uname = "";
 $Pword = "";
 include 'myfuncs.php';
-$db = new myfuncs();
-$conn = $db -> dbConnect();
+$conn =  dbConnect();
 
 $Uname = mysqli_real_escape_string($conn, $_POST['Uname']);
 $Pword = mysqli_real_escape_string($conn, $_POST['Pword']);
@@ -23,6 +22,7 @@ if ($Pword == ($blank or NULL)){
     $row = mysqli_fetch_array($result);
     $_SESSION['userID']  = $row['ID'];// Save User ID in the Session
     if ($row['USERNAME'] == $Uname && $row['PASSWORD'] == $Pword ){
+        saveUerId($row["ID"]);
         include 'loginResponse.php';
     } else{
         $message = 'Login Failed';
