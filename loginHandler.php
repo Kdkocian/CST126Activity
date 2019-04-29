@@ -1,13 +1,10 @@
-
 <?php
-
 $blank = "";
 $Uname = "";
 $Pword = "";
 include 'myfuncs.php';
 $db = new myfuncs();
 $conn = $db -> dbConnect();
-
 $Uname = mysqli_real_escape_string($conn, $_POST['Uname']);
 $Pword = mysqli_real_escape_string($conn, $_POST['Pword']);
 if ($Uname == ($blank or NULL)){
@@ -16,7 +13,6 @@ if ($Uname == ($blank or NULL)){
 if ($Pword == ($blank or NULL)){
     echo " The Password field is empty";
 }
-
 // checks to match username and password and logs in the users
     $result = mysqli_query($conn, "SELECT * From users Where USERNAME = '$Uname' and PASSWORD = '$Pword';")
         or die ("Failed to query database". mysqli_connect_error());
@@ -27,23 +23,6 @@ if ($Pword == ($blank or NULL)){
     } else{
         $message = 'Login Failed';
         include 'loginFailed.php';
-
     }
-    $sql = "SELECT * FROM user WHERE username='$username'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    if($row["username"] == $username && $row["password"] == $password)
-    {
-        saveUserId($row["id"]);
-        include('loginResponse.php');
-    }
-        
-    else 
-    {
-        $message = "Login Failed";
-        include('loginFailed.php');
-    }
-
-    mysqli_close($conn)
-?>
+    ?>
 <a href="index.html">Main Menu</a>
