@@ -23,5 +23,16 @@ function getUserId()
     session_start();
     return $_SESSION["USER_ID"];
 }
+
+    function saveUserId($id)
+    {
+        session_start();
+        $_SESSION["USER_ID"] = $id;
+    }
+    function getUserId()
+    {session_start();
+    return $_SESSION["USER_ID"];
+    }
+
 }
 ?>
