@@ -12,8 +12,8 @@ $pword = "";
 $errors = false;
 
 include 'myfuncs.php';
-$db = new myfuncs();
-$conn = $db -> dbConnect();
+$funcs = new myfuncs();
+$conn = $funcs -> dbConnect();
 
 $fname = mysqli_real_escape_string($conn, $_POST['fname']);
 $lname = mysqli_real_escape_string($conn, $_POST['lname']);

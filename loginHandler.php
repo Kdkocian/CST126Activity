@@ -2,7 +2,8 @@
 <?php
     //Open a connection
     require('myfuncs.php');
-    $conn = dbConnect();
+    $funcs = new myfuncs;
+    $conn = $funcs->dbConnect();
     if(mysqli_error($conn))
     die("Connection Failed: " . mysqli_connect_error());
     

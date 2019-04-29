@@ -1,5 +1,5 @@
 <?php
-
+class myfuncs{
 function dbConnect()
 {
     $host = 'us-cdbr-iron-east-02.cleardb.net';
@@ -23,5 +23,5 @@ function getUserId()
     session_start();
     return $_SESSION["USER_ID"];
 }
-
+}
 ?>
