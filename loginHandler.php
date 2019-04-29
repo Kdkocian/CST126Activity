@@ -1,6 +1,5 @@
 
 <?php
-session_start();
 $blank = "";
 $Uname = "";
 $Pword = "";
@@ -21,8 +20,8 @@ if ($Pword == ($blank or NULL)){
     $result = mysqli_query($conn, "SELECT * From users Where USERNAME = '$Uname' and PASSWORD = '$Pword';")
         or die ("Failed to query database". mysqli_connect_error());
     $row = mysqli_fetch_array($result);
-    $_SESSION['userID']  = $row['ID'];// Save User ID in the Session
     if ($row['USERNAME'] == $Uname && $row['PASSWORD'] == $Pword ){
+        $db->saveUserId($id);
         include 'loginResponse.php';
     } else{
         $message = 'Login Failed';
