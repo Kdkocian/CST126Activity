@@ -1,6 +1,5 @@
 
 <?php
-session_start();
 require ('myfuncs.php');
 $conn =  dbConnect();
 
@@ -17,7 +16,6 @@ if ($Pword == (NULL)){
 $sql = "SELECT * From users Where USERNAME = '$Uname' and PASSWORD = '$Pword';";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    $_SESSION['userID']  = $row['ID'];// Save User ID in the Session
     if ($row['USERNAME'] == $Uname && $row['PASSWORD'] == $Pword ){
         saveUerId($row["ID"]);
         include 'loginResponse.php';
