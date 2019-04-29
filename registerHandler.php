@@ -1,10 +1,6 @@
 <?php
 
 $blank = "";
-$servername = 'localhost';
-$username = 'bubblepop';
-$password = 'bubbles';
-$dbname ="users";
 $fname = "";
 $lname = "";
 $uname = "";
