@@ -4,7 +4,7 @@ session_start();
 $blank = "";
 $Uname = "";
 $Pword = "";
-include 'myfuncs.php';
+require ('myfuncs.php');
 $conn =  dbConnect();
 
 $Uname = mysqli_real_escape_string($conn, $_POST['Uname']);
