@@ -23,7 +23,7 @@ function getUsersbyFirstNAME($searchbar) {
     $result= mysqli_query($conn, $sql);
     while($row = mysqli_fetch_array($result)){
         
-        $users = array($row['ID'], $row['First_Name'], $row['Last_name']);
+        $users[] = array($row['ID'], $row['First_Name'], $row['Last_name']);
     }
     return $users;
 }
