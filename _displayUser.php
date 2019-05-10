@@ -1,8 +1,3 @@
-<?php
-include 'utility.php';
-$ut = new utility;
-$user = $ut -> getAllusers();
-?>
 <table>
 <tr><th>ID</th> <th>First Name</th> <th>Last Name</th></tr>
 <?php
