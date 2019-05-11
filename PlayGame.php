@@ -14,3 +14,4 @@ if($bm->isDead()){
 } else {
     echo "Superman is Dead";
 }
+?>

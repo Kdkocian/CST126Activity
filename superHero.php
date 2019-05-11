@@ -6,10 +6,10 @@ class superHero
     Private $health;
     Private $isDead;
     
-    function __construct($name, $health, $isDead){
+    function __construct($name, $health){
         $this->name = $name;
         $this->health = $health;
-        $this->isDead = $isDead;
+        $this->isDead = false;
     }
     function attack(){
        $attack = rand(1,10);
@@ -20,9 +20,9 @@ class superHero
         return $this->health;
     }
     function isDead(){
-        if($newHealth < 0){
+        if($this->health < 0){
            return true;
-           else
+        }else{
            return false;
         }
     }
