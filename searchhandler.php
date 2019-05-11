@@ -3,7 +3,6 @@ include 'utility.php';
 $utility = new utility();
 $searchresult = $_POST['Search Bar'];
 $user = $utility->getUsersbyFirstNAME($searchresult);
-
 ?>
 
 <html>
@@ -12,6 +11,7 @@ $user = $utility->getUsersbyFirstNAME($searchresult);
 </head>
 <body>
 <?php 
+echo "<p>".$_POST['Search Bar']."</p>";
 include '_displayUser.php';
 ?>
 </body>

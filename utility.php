@@ -14,7 +14,7 @@ function getAllusers(){
        mysqli_close($conn);
        return $users;
  }
-function getUsersbyFirstNAME($searchbar) {
+function getUsersbyFirstNAME($searchbar){
     $db = new myfuncs();
     $conn = $db -> dbConnect();
     $searchresult = mysqli_real_escape_string($conn, $searchbar);
@@ -22,10 +22,9 @@ function getUsersbyFirstNAME($searchbar) {
     $users = array();
     $result= mysqli_query($conn, $sql);
     while($row = mysqli_fetch_array($result)){
-        
         $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
-        echo "<br>";
     }
+    mysqli_close($conn);
     return $users;
 }
 }
