@@ -1,7 +1,7 @@
 <?php
 include 'utility.php';
 $utility = new utility();
-$searchresult = $_POST['Search Bar'];
+$searchresult = $_POST['SearchBar'];
 $user = $utility->getUsersbyFirstNAME($searchresult);
 ?>
 
@@ -11,7 +11,7 @@ $user = $utility->getUsersbyFirstNAME($searchresult);
 </head>
 <body>
 <?php 
-echo "<p>".$_POST['Search Bar']."</p>";
+echo "<p>".$_POST['SearchBar']."</p>";
 include '_displayUser.php';
 ?>
 </body>
