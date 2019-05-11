@@ -24,6 +24,7 @@ function getUsersbyFirstNAME($searchbar) {
     while($row = mysqli_fetch_array($result)){
         
         $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
+        echo "<br>";
     }
     return $users;
 }
