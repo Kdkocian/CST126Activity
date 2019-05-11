@@ -11,7 +11,6 @@ $user = $utility->getUsersbyFirstNAME($searchresult);
 </head>
 <body>
 <?php 
-echo "<p>".$_POST['SearchBar']."</p>";
 include '_displayUser.php';
 ?>
 </body>
