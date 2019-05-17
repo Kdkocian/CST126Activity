@@ -7,7 +7,7 @@
 <?php include ('_displayUser.php');?>
 <?php 
 include 'utility.php';
-$utility = new utility();
+$utility = new utility;
 $utility->insertUsers();
 ?>
 <a href="whoAmI.php">Who Am I</a>
