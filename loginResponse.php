@@ -2,7 +2,7 @@
 include 'utility.php';
 $utility = new utility;
 $utility->insertUsers();
-$user = utility;
+$user = $utility;
 $user->getAllusers();
 ?>
 <html>
