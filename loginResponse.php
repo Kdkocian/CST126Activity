@@ -1,6 +1,6 @@
 <?php 
 include 'utility.php';
-$utility = utility();
+$utility = new utility();
 $utility->insertUsers();
 
 ?>
