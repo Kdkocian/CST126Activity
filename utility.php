@@ -37,7 +37,7 @@ class utility{
                                      );
                     
                     $conn = $db->dbConnect();
-                    for($int = 0; $int < count($user); $int++)
+                    for($int = 0; $int < count($moreusers); $int++)
                     {
                         $fname = mysqli_real_escape_string($conn, $moreusers [$int][0]);
                         $lname = mysqli_real_escape_string($conn, $moreusers [$int][1]);
