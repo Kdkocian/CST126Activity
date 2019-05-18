@@ -1,8 +1,9 @@
 <?php 
 include 'utility.php';
-$utility = new utility;
-$utility->insertUsers()->insertUsers();
-$user = $utility;
+$user = new utility;
+$user->insertUsers();
+$user->getAllusers();
+
 
 ?>
 <html>
