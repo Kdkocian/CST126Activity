@@ -4,8 +4,8 @@ class utility{
     function getAllusers(){
             $db = new myfuncs();
                 $conn = $db->dbConnect();
-                       $sql = "SELECT ID, First_Name, Last_Name FROM users";
-                         $users = array();  
+                       $sql = "SELECT * FROM users";
+                       $users = array();  
                        $result = mysqli_query($conn, $sql);
                        
                            while ($row = mysqli_fetch_array($result)){
