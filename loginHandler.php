@@ -26,3 +26,4 @@ if ($Pword == ($blank or NULL)){
     }
     ?>
 <a href="index.html">Main Menu</a>
+<a href="post.php">Post</a>

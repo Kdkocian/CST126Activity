@@ -4,7 +4,7 @@
 		<title>Add a Post</title>
 	</head>
     <body>
-        <form action="../controllers/postManagement.php" method="POST">
+        <form action="postManagement.php" method="POST">
             <input name="title" type="text" size="48"/><br/>
             <textarea name="content" rows="20" cols="50"></textarea><br/>
             <input name="submitPost" type="submit" value="Post"/>  
