@@ -8,7 +8,8 @@ class utility{
                        $users = array();  
                        $result = mysqli_query($conn, $sql);
                        
-                           while ($row = mysqli_fetch_array($result)){
+                           while ($row = mysqli_fetch_array($result))
+                           {
                                $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
                            }
                        mysqli_close($conn);
@@ -21,13 +22,15 @@ class utility{
                     $sql = "SELECT * FROM users WHERE First_Name LIKE '%$searchresult%'";
                     $users = array();
                     $result= mysqli_query($conn, $sql);
-                    while($row = mysqli_fetch_array($result)){
+                    while($row = mysqli_fetch_array($result))
+                    {
                         $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
                     }
                     mysqli_close($conn);
                     return $users;
                 }
-                function insertUsers(){
+                function insertUsers()
+                {
                     $db = new myfuncs();
                     
                     $moreusers = array([Jekyll, Hyde, Halfandhalf, Evil],
